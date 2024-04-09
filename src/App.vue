@@ -1,20 +1,19 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <template v-for="item of 10">
+      <div :key="item">{{ item }}</div>
+    </template>
+    <template v-for="i of a">
+      <div :key="i">{{ i }}</div>
+    </template>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script setup lang="ts">
 
-export default Vue.extend({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-});
+const a=[1,2,3,4,5,6,7,8,9]
+
 </script>
 
 <style>
